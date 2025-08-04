@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nueva página</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<center><img id="img1" src="izzi.png" alt="logo izzi"></center><br><br>
+<center><h1>ACTUALIZACION FW SKYWORTH HP46A</h1></center>
+<center><h1>P1.0.28</h1></center><br><br>
+<div class="video-preview">
+<img src="sw.png" alt="Vista previa del video" id="previewImg">
+<script>
+document.querySelector('img').addEventListener('contextmenu', function(e) {
+e.preventDefault();
+  });
+</script>
+<center><button class="play-button" onclick="reproducirVideo()">
+<svg viewBox="0 0 24 24">
+      <path d="M8 5v14l11-7z"/>
+    </svg>    
+</button></center>
+<video id="video" src="lib3.mp4" controls></video>
+<script>
+document.querySelector('video').addEventListener('contextmenu', function(e) {
+e.preventDefault();
+  });
+</script>
+</div>
+<br><br><br>
+</div>
+<script>
+    function reproducirVideo() {
+      const video = document.getElementById('video');
+      const previewImg = document.getElementById('previewImg');
+      const playBtn = document.querySelector('.play-button');
+previewImg.style.display = 'none';
+playBtn.style.display = 'none';
+video.style.display = 'block';
+video.play();
+    }
+    
+</script>
+</body>
+</html>
